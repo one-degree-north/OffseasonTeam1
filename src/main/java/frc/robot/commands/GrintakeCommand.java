@@ -14,12 +14,11 @@ public class GrintakeCommand extends Command {
   private Grintake s_Grintake;
   private GrintakeMode grintakeMode;
   private Command command;
-  private boolean isFinished;
-  public GrintakeCommand(Grintake s_Grintake, GrintakeMode grintakeMode, boolean isFinished) {
+
+  public GrintakeCommand(Grintake s_Grintake, GrintakeMode grintakeMode) {
     // Use addRequirements() here to declare subsystem dependencies.
     this.s_Grintake = s_Grintake;
     this.grintakeMode = grintakeMode;
-    this.isFinished = isFinished;
     addRequirements(s_Grintake);
   }
 
@@ -66,10 +65,9 @@ public class GrintakeCommand extends Command {
   // Called once the command ends or is interrupted.
   @Override
   public void end(boolean interrupted) {
-    if (isFinished) {
-      s_Grintake.stopAll();
+    s_Grintake.stopAll();
     }
-  }
+  
 
   // Returns true when the command should end.
   @Override

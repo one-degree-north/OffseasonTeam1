@@ -13,12 +13,10 @@ public class PivotCommand extends Command {
   private PivotPosition pivotPositions;
   private Pivot s_Pivot;
   private Command command;
-  private boolean isFinished;
 
-  public PivotCommand(Pivot s_Pivot, PivotPosition pivotPositions, boolean isFinished) {
+  public PivotCommand(Pivot s_Pivot, PivotPosition pivotPositions) {
     this.s_Pivot = s_Pivot;
     this.pivotPositions = pivotPositions;
-    this.isFinished = isFinished;
     addRequirements(s_Pivot);
   }
 
@@ -57,9 +55,7 @@ public class PivotCommand extends Command {
   // Called once the command ends or is interrupted.
   @Override
   public void end(boolean interrupted) {
-    if (isFinished) {
-      s_Pivot.stopAll();
-    }
+    s_Pivot.stopAll();
   }
 
   // Returns true when the command should end.

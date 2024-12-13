@@ -15,13 +15,11 @@ public class ClawCommand extends Command {
   private Claw s_Claw;
   private ClawMode clawMode;
   private Command command;
-  private boolean isFinished;
 
-  public ClawCommand(Claw claw, ClawMode clawMode, boolean isFinished) {
+  public ClawCommand(Claw claw, ClawMode clawMode) {
     // Use addRequirements() here to declare subsystem dependencies.
     this.s_Claw = claw;
     this.clawMode = clawMode;
-    this.isFinished = isFinished;
     addRequirements(s_Claw);
   }
 
@@ -53,10 +51,9 @@ public class ClawCommand extends Command {
   // Called once the command ends or is interrupted.
   @Override
   public void end(boolean interrupted) {
-    if (isFinished) {
-      s_Claw.stopAll();
+    s_Claw.stopAll();
     }
-  }
+  
 
   // Returns true when the command should end.
   @Override

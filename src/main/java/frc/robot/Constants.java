@@ -16,7 +16,7 @@ public final class Constants{
             public static final double intakekI = 0;
             public static final double intakekD = 0;
             public static final double intakekFF = 0;
-            public static final double intakeRampRate = 2;
+            public static final double intakeRampRate = 4;
     
             public static final double pivotkP = 0;
             public static final double pivotkI = 0;
@@ -25,10 +25,10 @@ public final class Constants{
             public static final double pivotkV = 0;
             public static final double pivotkA = 0;
 
-            public static final double pivotDS = 0.4;
+            public static final double pivotDS = 0.2;
             public static final double intakeDS = 0.6;
-            public static final double feedingDS = 0;
-            public static final double outputDS = 0;
+            public static final double feedingDS = 0.2;
+            public static final double outputDS = -0.3;
     
             public static final double intakeRPM = 0;
             public static final double feedingRPM = 0;
@@ -52,7 +52,7 @@ public final class Constants{
             public static final double pivotCruiseVelocity = 3;
             public static final double pivotCruiseAcceleration = 5;
 
-            public static final double pivotDS = 1;
+            public static final double pivotDS = 0.15;
     
             public static final double pivotDockedPos = 0;
             public static final double pivotFeedPos = 0;
@@ -71,8 +71,8 @@ public final class Constants{
             public static final double rollerskFF = 0;
             public static final double rollerRampRate = 3;
 
-            public static final double rollerFeedDS = 0.6;
-            public static final double rollerOutputDS = 0;
+            public static final double rollerFeedDS = 0.3;
+            public static final double rollerOutputDS = -0.4;
     
             public static final double intakeRollerRPM = 0;
             public static final double outtakeRollerRPM = 0;

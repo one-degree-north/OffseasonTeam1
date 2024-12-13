@@ -49,38 +49,38 @@ public class RobotContainer {
   private void configureBindings() {
 
     mainController.R1().whileTrue(
-      new PivotCommand(s_Pivot, PivotPosition.UPDS, true)
+      new PivotCommand(s_Pivot, PivotPosition.UPDS)
     );
 
     mainController.R2().whileTrue(
-      new PivotCommand(s_Pivot, PivotPosition.DOWNDS, true)
+      new PivotCommand(s_Pivot, PivotPosition.DOWNDS)
     );
 
     mainController.L1().whileTrue(
-      new GrintakeCommand(s_Grintake, GrintakeMode.PIVOTUPDS, true)
+      new GrintakeCommand(s_Grintake, GrintakeMode.PIVOTUPDS)
     );
     
     mainController.L2().whileTrue(
-      new GrintakeCommand(s_Grintake, GrintakeMode.PIVOTDOWNDS, true)
+      new GrintakeCommand(s_Grintake, GrintakeMode.PIVOTDOWNDS)
     );
 
     mainController.cross().whileTrue(
-      new GrintakeCommand(s_Grintake, GrintakeMode.INTAKEDS, true)
+      new GrintakeCommand(s_Grintake, GrintakeMode.INTAKEDS)
     );
 
     mainController.circle().whileTrue(
-      new GrintakeCommand(s_Grintake, GrintakeMode.OUTTAKEDS, true)
+      new GrintakeCommand(s_Grintake, GrintakeMode.OUTTAKEDS)
     );
 
     mainController.square().whileTrue(
       Commands.parallel(
-        new GrintakeCommand(s_Grintake, GrintakeMode.FEEDING, true),
-        new ClawCommand(s_Claw, ClawMode.INTAKEDS, true)
+        new GrintakeCommand(s_Grintake, GrintakeMode.FEEDING),
+        new ClawCommand(s_Claw, ClawMode.INTAKEDS)
       )
     );
     
     mainController.triangle().whileTrue(
-      new ClawCommand(s_Claw, ClawMode.OUTTAKEDS, true)
+      new ClawCommand(s_Claw, ClawMode.OUTTAKEDS)
     );
 
     // mainController.R2().whileTrue(
